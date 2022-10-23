@@ -2,5 +2,5 @@ import { JwtPayload } from "jsonwebtoken";
 import { Request } from "express";
 
 export interface RequestExt extends Request {
-  user?: string | JwtPayload;
+  user?: JwtPayload | { id: string };
 }

@@ -9,7 +9,7 @@ const checkJwt = (req: RequestExt, res: Response, next: NextFunction) => {
     const jwt = authToken.split(" ").pop(); //* ['Bearer', 'jwt*****']
 
     //! payload
-    const isUser = verifyToken(`${jwt}`);
+    const isUser = verifyToken(`${jwt}`) as { id: string };
     if (!isUser) {
       res.status(401);
       res.send("jwt not valid");
