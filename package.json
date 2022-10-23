@@ -4,7 +4,9 @@
   "description": "an api with tsc from leifer_mendez",
   "main": "index.js",
   "scripts": {
-    "develop": "nodemon ./src/app.ts"
+    "develop": "nodemon ./src/app.ts",
+    "ts-build": "tsc ",
+    "start": "node ./dist/app.js"
   },
   "author": "mwlk",
   "license": "ISC",
